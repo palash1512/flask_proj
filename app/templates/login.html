@@ -2,6 +2,7 @@
 
 {% block content %}
     <h1>Sign In</h1>
+    <div class="form-group row">
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
          <p>New User? <a href="/register">Click to Register!</a></p>
@@ -20,6 +21,7 @@
             {% endfor %}
         </p>
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
+        <p>{{ form.submit(class="btn btn-primary") }}</p>
     </form>
+    <div>
 {% endblock %}
